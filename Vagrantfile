@@ -11,8 +11,8 @@ Vagrant.configure("2") do |config|
     # Optional NFS. Make sure to remove other synced_folder line too
     #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
 
-    config.vm.provision "shell", path: "provisioner/update_php.sh"
-    config.vm.provision "shell", path: "provisioner/install_phpmyadmin.sh"
+    #config.vm.provision "shell", path: "provisioner/update_php.sh"
+    #config.vm.provision "shell", path: "provisioner/install_phpmyadmin.sh"
     config.vm.provision "shell", path: "provisioner/bootstrap.sh"
 
 end

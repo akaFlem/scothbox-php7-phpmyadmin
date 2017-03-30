@@ -7,6 +7,5 @@ sudo npm install -g n
 sudo n lts
 echo "Update composer ..."
 sudo composer self-update
-composer global update
-
-
+cd /home/vagrant/.composer
+composer update 
