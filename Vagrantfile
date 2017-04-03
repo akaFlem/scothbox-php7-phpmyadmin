@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.provision "shell", path: "provisioner/update_php.sh"
     config.vm.provision "shell", path: "provisioner/install_phpmyadmin.sh"
+    config.vm.provision "shell", path: "provisioner/updates.sh"
     config.vm.provision "shell", path: "provisioner/bootstrap.sh"
 
 end
