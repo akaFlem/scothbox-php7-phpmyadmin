@@ -62,3 +62,11 @@ composer update
 **Npm lastest stable version.**  
 **NodeJS latest LTS version.**  
 **Composer latest stable version and update all packages includes in Scotch Box.**
+
+## Bootstrap
+Just incude every commands you want in this file.
+>"You understand ?"  
+
+-------------------------------------------------------------------------------------------------------  
+  
+![](https://media.giphy.com/media/2wUWy2yjpPtPq/giphy.gif)
