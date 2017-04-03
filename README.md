@@ -2,14 +2,17 @@
 Just a simple custom Scotch Box form [https://box.scotch.io](https://box.scotch.io)  _(v2.5)_  
 1. update to **PHP 7.0**
 2. add **PHPMyAdmin**
-3. bootstrap with updates for **npm**, **nodejs** and **composer**
+3. updates for **npm**, **nodejs** and **composer**
+4. and a simple empty bootstrap file for your customs commands ...
 
-## Just 
+## Get Started
+Just follow the instructions in [https://github.com/scotch-io/scotch-box](https://github.com/scotch-io/scotch-box)
 
 ## Shell files in VagrantFile
 ```sh
 config.vm.provision "shell", path: "provisioner/update_php.sh"
 config.vm.provision "shell", path: "provisioner/install_phpmyadmin.sh"
+config.vm.provision "shell", path: "provisioner/updates.sh"
 config.vm.provision "shell", path: "provisioner/bootstrap.sh"
 ```
 For example, if you do not want PhpMyAdmin, just comment on the corresponding line
@@ -34,3 +37,28 @@ sudo service apache2 restart
 ```
 * All modules necessary for the proper functioning of Scotch Box are installed for PHP 7.0
 * PHP 5.6 is just disabled but still installed
+
+## PHPMyAdmin
+http://192.168.33.10/phpmyadmin/  
+**Login : root**
+**Password: root**  
+Just comment the line in the VagrantFile if you don't want PHPMyAdmin.  
+You can also use a solution like [Sequel Pro](https://www.sequelpro.com) for Mac or [HeidiSQL](https://www.heidisql.com) for Windows.
+
+## Updates
+```sh
+#!/usr/bin/env bash	
+echo "Update last version npm"
+sudo npm install npm@latest -g
+echo "update node ..."
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n lts
+echo "Update composer ..."
+sudo composer self-update
+cd /home/vagrant/.composer
+composer update 
+```
+**Npm lastest stable version.**  
+**NodeJS latest LTS version.**  
+**Composer latest stable version and update all packages includes in Scotch Box.**
