@@ -6,7 +6,7 @@ Just a simple custom Scotch Box form [https://box.scotch.io](https://box.scotch.
 4. and a simple empty bootstrap file for your customs commands ...
 
 ## Get Started
-Just follow the instructions in [https://github.com/scotch-io/scotch-box](https://github.com/scotch-io/scotch-box)
+Just follow the instructions in [https://box.scotch.io](https://box.scotch.io)
 
 ## Shell files in VagrantFile
 ```sh
